@@ -1,0 +1,31 @@
+@mixin centerFlex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin heading()
+{
+    font-size: 6em;
+    text-align: center;
+}
+@mixin heading_tablet()
+{
+    font-size: 4em;
+    text-align: center;
+}
+@mixin margin_tablet()
+{
+    margin:100px auto;
+}
+
+@mixin heading_mobile()
+{
+    font-size: 3em;
+    font-weight: bold;;
+    text-align: center;
+}
+@mixin margin_mobile()
+{
+    margin:60px auto;
+}

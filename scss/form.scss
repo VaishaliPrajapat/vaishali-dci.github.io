@@ -1,0 +1,103 @@
+.contact_main_container{
+    margin:200px 0 50px 0;
+}
+.contact_container{
+    height:100%;
+    width: 800px;
+    margin: auto;
+    padding-top: 30px;
+    box-shadow: 2px 2px 12px rgba(233, 223, 223, 0.945);
+}
+#Contact{
+     padding-top:100px;
+   }
+label{
+    display:block;
+    font-size: 30px;
+    width:350px;
+    // margin-left: 100px;
+     margin:20px;
+    
+}
+input{
+    display: block;
+    font-size: 30px;
+    width: 750px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+textarea{
+    display: block;
+    font-size: 20px;
+    width: 750px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+button
+{
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    height:70px;
+    width:150px;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.contact_head{
+    @include heading;
+}
+button:hover{
+    background: rgb(219, 238, 215);
+}
+//-----------------------------------------------
+
+@media(min-width:768px) and (max-width:1024px){
+    #Contact{
+        padding-top:150px;
+    }
+    .contact_container{
+    width: 600px;
+    margin:20px auto ;
+}
+input,textarea {
+    width: 550px;
+    margin: 0 auto ; 
+}
+.contact_head{
+    @include heading_tablet;
+}
+}
+@media screen and (max-width: 767px) {
+    .contact_main_container{
+        height: 550px;
+        @include margin_mobile;
+    }
+    .contact_container{
+        width: 290px;
+        margin:0px auto;
+    }
+    label{
+        display:block;
+        font-size: 20px;
+        width:350px;
+        // margin-left: 100px;
+         margin:10px 20px;
+        
+    }
+    input,textarea {
+        width: 250px;
+        font-size: 15px;
+        margin: 10px 20px ; 
+    }
+    button
+    {
+    margin: 12px auto;
+    font-size: 15px;
+    height:45px;
+    width:120px;;
+    }
+    .contact_head{
+         @include heading_mobile;
+    }
+
+}

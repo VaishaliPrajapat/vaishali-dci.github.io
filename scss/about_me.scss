@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+
+.about_main_container{
+    width:100%;
+    height:800px;
+    margin: 200px auto;
+}
+.about_main_container .about_head{
+    font-size: 6em;
+    text-align: center;
+}
+#About{
+    padding-top:100px;
+}
+.about_second_container{
+    width:100%;
+    height:700px;
+    /* background-color:rgba(255, 255, 255, 0.5); */
+    /* border-radius: 20px; */
+    /* box-shadow: 2px 2px 12px rgba(34, 15, 15, 0.2); */
+    display:flex;
+    margin: auto;
+    justify-content: space-around;
+    // align-items: center;
+    flex-direction: row;
+}
+
+.about_container img{
+    width:500px;
+    height:500px;
+    margin:auto 50px; 
+}
+
+.about_text{
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 550px; 
+    font-size: 22px;  
+    margin:100px 0px;  
+    text-align:justify;
+    font-family: 'KoHo', sans-serif;
+    
+}
+.about_text h2{
+    font-size:50px;
+   
+    
+}
+
+//---------------------------------------------------------------------------
+
+@media(min-width:768px) and (max-width:1024px){
+    #About{
+        padding-top:150px;
+    }
+    .about_main_container{
+        // overflow-x: hidden;
+        width:80%;
+        height:1000px;
+        margin: 100px auto;
+}
+.about_main_container .about_head{
+    @include heading_tablet;
+}
+    
+   
+    .about_second_container{
+        height:800px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+     .about_second_container img{
+        width: 450px;
+        height: 450px;   
+    }
+    
+    .about_text{
+        height:250px;
+        font-size: 20px;   
+        margin:20px 0px;   
+    }
+    .about_text h2{
+        font-size:40px;
+    }
+    
+}
+
+//------------------Mobile-----------------------
+@media screen and (max-width: 767px) {
+    .about_main_container{
+        height:600px;
+        @include margin_mobile;
+    }
+.about_main_container .about_head{
+     @include heading_mobile;
+ }
+    
+   
+    .about_second_container{
+        height:450px;
+        flex-direction: column;
+        justify-content: space-between;
+         align-items: center;
+
+        }
+
+    .about_second_container img{
+        width: 250px;
+        height: 250px;      
+    }
+    
+    .about_text{
+        height:200px;
+        width:330px;
+        font-size: 12px;
+        justify-content: space-evenly;
+         align-items: center;
+         margin:auto;
+    }
+    .about_text h2{
+        font-size:30px;
+    }
+}

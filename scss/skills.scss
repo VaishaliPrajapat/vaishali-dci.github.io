@@ -1,0 +1,88 @@
+.skills{
+  margin:200px auto;
+}
+#Skill{
+  padding-top:100px;
+}
+.skill_box{
+    width: 100%;
+    /* height: 50em; */
+    margin:auto 0;
+    //  margin: 2em 0;
+    position: relative;
+    display:flex;
+    flex-direction: row;    
+    justify-content: center;
+    flex-wrap: wrap;
+    //overflow-x: hidden;
+  }
+     
+  .skill_box .box {
+    margin: 2em 2em;
+    width: 15em;
+    height: 12em;
+    background: rgba(37, 138, 24, 0.089);
+
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    border-bottom: none;
+    @include centerFlex(center,center);
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+  
+   .skill_box .box::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(168, 214, 214);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: bottom;
+    transform: scaleY(0.03);
+    transition: all 0.3s;
+  } 
+  .skill_box .box:hover::before {
+    transform: scaleY(1);
+  }
+  .skill_box .box i {
+    margin-bottom: 0.1em;
+  }
+  .skill_head {
+    font-size: 6em;
+    text-align: center;
+    /* font-family: var(--font); */
+  }
+
+  @media(min-width:768px) and (max-width:1024px){
+    .skills{
+      margin:100px auto;
+    }
+   .skill_head {
+    @include heading_tablet;
+}
+#Skill{
+  padding-top:150px;
+}
+  }
+
+
+  //------------------Mobile--------------
+  @media screen and (max-width: 767px) {
+    .skill_box .box {
+      margin: 2em 2em;
+      width: 10em;
+      height: 10em;
+    }
+    .skills{
+      @include margin_mobile;
+    }
+   .skill_head {
+    @include heading_mobile;
+}
+  }
+  
